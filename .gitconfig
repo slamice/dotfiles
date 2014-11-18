@@ -1,0 +1,11 @@
+[user]
+    email = mmaatthheeww@gmail.com
+    name = mturner
+[alias]
+    co = checkout
+    st = status
+    hist = log --decorate --graph --oneline --date-order
+[core]
+    excludesfile = /home/mturner/.gitignore_global
+[color]
+    ui = true

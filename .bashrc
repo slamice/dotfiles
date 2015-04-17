@@ -3,4 +3,8 @@ export PATH=/usr/local/bin:$PATH
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
-alias www='cd ~/Documents/www'
+
+openProject() {
+    cd ~/Documents/www/$1
+}
+alias www=openProject

@@ -1,11 +1,26 @@
-[user]
-    email = mmaatthheeww@gmail.com
-    name = mturner
 [alias]
     co = checkout
     st = status
     hist = log --decorate --graph --oneline --date-order
+    summary = log --abbrev-commit --pretty=oneline --author="Matthew K. Turner" --since=last.mon --reverse
+[branch]
+    autosetupmerge = always
 [core]
-    excludesfile = /home/mturner/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [color]
-    ui = true
+    ui = auto
+    diff = auto
+    status = auto
+    interactive = auto
+    grep = auto
+[github]
+    user = matthewkturner
+[pull]
+    rebase = true
+[push]
+    default = current
+[rebase]
+    autosquash = true
+[user]
+    email = matthew.keith.turner@gmail.com
+    name = Matthew K. Turner

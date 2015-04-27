@@ -12,4 +12,5 @@ set relativenumber
 set number
 
 let g:airline_theme = 'airlineish'
+let g:airline_section_c = '%{getcwd()}%t'
 let g:airline_powerline_fonts = 1

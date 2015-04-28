@@ -10,6 +10,7 @@ set expandtab
 set nu
 set relativenumber
 set number
+set background=dark
 
-let g:airline_theme = 'airlineish'
+let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1

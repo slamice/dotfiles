@@ -48,6 +48,8 @@ fi)'
 
 # Aliases
 alias ls='ls -GFh'
+alias df='df -h'
+
 openProject() {
     cd ~/Documents/www/$1
 }

@@ -12,6 +12,9 @@ set nu
 set relativenumber
 set number
 set nohlsearch
+set title
+set cursorline
+set smartcase
 
 let g:solarized_termcolors=256
 set background=dark

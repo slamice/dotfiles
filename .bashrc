@@ -25,12 +25,18 @@ Time24="\t"
 User="\u"
 Host="\h"
 PathShort="\w"
-PathFull="\W"
+PathFull="\w"
 NewLine="\n"
 Jobs="\j"
 
+if test -z "$VIRTUAL_ENV" ; then
+  PYTHON_VIRTUALENV=""
+else
+  PYTHON_VIRTUALENV="${BLUE}[`basename \"$VIRTUAL_ENV\"`]${COLOR_NONE} "
+fi
+
 # Prompt
-export PS1=$Time24' '$Purple$User$White'@'$Purple$Host$White' '$PathFull$Color_Off'$(git branch &>/dev/null;\
+export PS1=''$NewLine''$Time12a' '$Purple$User$White'@'$Purple$Host$White': '$PathFull$Color_Off'$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
@@ -39,18 +45,20 @@ if [ $? -eq 0 ]; then \
   else \
     # @5 - Changes to working tree
     echo "'$Red'"$(__git_ps1 " (%s)"); \
-  fi) '$Color_Off'\$ "; \
+  fi) '$Color_Off' "; \
 else \
   # @2 - Prompt when not in GIT repo
-  echo " '$Color_Off'\$ "; \
-fi)'
+  echo " '$Color_Off' "; \
+fi) '$White' \n$ '$Color_Off''
 
 
 # Aliases
 alias ls='ls -GFh'
 alias df='df -h'
+alias vi='vim'
 
 openProject() {
     cd ~/Documents/www/$1
 }
 alias www=openProject
+alias dev='cd ~/Documents/www/rocketrip-dev/ && source venv/bin/activate'
